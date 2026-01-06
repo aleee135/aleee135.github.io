@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <title>Consulenza Tecnica Domestica</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#1f2933">
 <style>
 body {
   margin: 0;
@@ -59,7 +61,8 @@ footer {
 }
 .small {
   font-size: 14px;
-  opacity: 0.8;
+  opacity: 0.85;
+  margin-top: 20px;
 }
 </style>
 </head>
@@ -81,6 +84,14 @@ footer {
   <a href="mailto:alessandroo2398@gmail.com?subject=Richiesta%20assistenza%20tecnica">
     <button>Richiedi assistenza</button>
   </a>
+
+  <!-- FRASE CHE AUMENTA I CONTATTI -->
+  <p class="small">
+    Hai un dubbio ma non sai se il tuo problema rientra in questo servizio?<br>
+    Puoi scrivermi senza impegno.
+    Capire se posso aiutarti e come muoverti
+    fa già parte del supporto.
+  </p>
 </header>
 
 <section>
@@ -140,14 +151,6 @@ footer {
   </div>
 
   <div class="box">
-    <h2>Cosa NON faccio</h2>
-    <p>
-      Non effettuo interventi fisici e non sostituisco un tecnico sul posto.<br>
-      Il mio ruolo è aiutarti a capire e decidere, non farti correre rischi.
-    </p>
-  </div>
-
-  <div class="box">
     <h2>Chi sono</h2>
     <p>
       Ho esperienza pratica in ambito <strong>elettrico, elettronico e idraulico</strong>,
@@ -170,6 +173,11 @@ footer {
   </p>
 </footer>
 
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('service-worker.js');
+}
+</script>
+
 </body>
 </html>
-
